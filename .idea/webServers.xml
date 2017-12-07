@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="125c694e-0ac9-4a8f-b56a-f9bda0b1bb5d" name="alibaba" url="http://47.94.196.22/,cn">
+        <fileTransfer host="47.94.196.22" port="22" rootFolder="/var/www/wechat" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

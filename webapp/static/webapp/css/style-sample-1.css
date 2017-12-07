@@ -1,0 +1,109 @@
+body {background: #fafafa}
+.h-carousel .h-c-box {height:100%;width:100%;position: relative}
+.h-carousel .h-c-box ul { width:100%; height:100%}
+.h-carousel .h-c-box ul li{ width:100%; height:100%; list-style: none;float: left}
+.h-carousel .h-c-box ul li img {width:100%; height:100%;}
+.h-b-menu { background: #fff; width:100%; height:8rem; overflow: hidden;    padding: 5px 0;}
+.h-b-menu .h-m-box {width:100%; height:100%; margin: 0 auto; text-align: center;}
+.h-b-menu .h-m-box ul {width: 100%; height: 100%}
+.h-b-menu .h-m-box ul li {list-style: none; float: left; width:25%; height:50%;}
+.h-b-menu .h-m-box ul li dl {width: 100%;height:100%}
+.h-b-menu .h-m-box ul li dl dt{width:100%;height:70%;}
+.h-b-menu .h-m-box ul li dl dt img {height:100%;}
+.h-b-menu .h-m-box ul li dl dd{width:100%;height:30%; font-size:12px; color: #999;}
+
+.news-box { background: #fff; width:100%; margin-top:5px;}
+.news-box .news-title{width:100%; height:1.5rem;font-weight: bold; }
+.news-box .news-title span { border-right: 1rem solid white;  border-top: 1rem solid #0099ff;  display: block;  float: left;}
+.news-box .news-item {width:100%;  margin-top: 3px;}
+.news-box .news-item .img-area {width:7rem; height:100%;max-width: 30%;float: left; border-bottom: 1px solid #fbfbfb}
+.news-box .news-item .img-area img {width: 100%; height:100%; padding-left:0.2rem}
+.news-box .news-item .text-area {width:100%; display: inline-block;}
+.news-box .news-item .text-t-area {width:100%; display: inline-block;}
+.news-box .news-item .t-a-title { height:2rem; overflow: hidden;  text-overflow: ellipsis; white-space: nowrap;  line-height: 2rem;  padding:0 0.5rem;color: #555555;}
+.news-box .news-item .t-a-content{  overflow: hidden; text-indent: 2em;  font-size: 13px; padding:0 0.5rem;color: #aaa;}
+.news-box a{text-decoration: none;}
+
+.bill-box{ background: #fff; width:100%; margin-top:5px;padding:5px}
+.bill-box .n-b-c-title {width:100%; height:2rem}
+.bill-box .n-c-t-prompt {width:2rem; height:2rem; float: right}
+.bill-box .n-c-t-prompt i{color: #888; font-size:14px}
+.bill-box .n-b-c-title .n-c-t-icon {width: 2rem;  height: 2rem;  color: #ffffff;  float: left;  text-align: center;  font-size: 1.2rem;  line-height: 2rem;  background: rebeccapurple;  border-radius: 5px;}
+.bill-box .n-b-c-title .n-c-t-text {display: inline-block;float: left;font-size: 13px;  color: #999;  line-height: 1rem;}
+.bill-box .n-b-c-title .n-c-t-text .n-c-t-title,.n-c-t-time {padding-left:3px;}
+.bill-box .n-b-c-content {margin-top:5px; padding:5px;}
+.bill-box .n-b-c-content .n-b-c-line{ width: 98%;height:1.8rem;line-height: 1.8rem; font-size: 13px;  color: #777;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-l{width: 30%; height:100%;float: left;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-r .n-b-c-l-m {font-size:20px;  color: #000;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-r{width: 70%; height:100%;float: right;text-align: right}
+
+.spend-main.block-1 {width:100%;position: absolute; min-height: 10rem;}
+.spend-main.block-0 {width:100%;position: absolute; left:100%;min-height: 10rem;}
+.spend-main.block-2 {width:100%;position: absolute; left:-100%;min-height: 10rem;}
+
+.spend-main .s-m-title {width:100%; height: 15rem;
+    background: #2951ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4fb9ff, #2951ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4fb9ff, #2951ff);}
+.s-m-title-spend {width:100%; height: 3.5rem;
+    background: #2951ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4fb9ff, #3e8cff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4fb9ff, #3e8cff);
+    position: relative;
+}
+.s-m-title-spend .btn-condition{bottom: 0;  position: absolute;  text-align: center;  width: 20rem;  left: 50%;  margin-left: -10rem;  font-size: 14px;  padding: 1px 0;  color: #fff; margin-top:0.5rem}
+.s-m-title-spend .btn-condition span{font-size:18px}
+.s-m-title-spend .btn-condition .fa {padding-top: 5px;}
+.s-m-title-spend .btn-condition .select-area {width: 80%;    margin: 0 auto; display: none}
+.s-m-title-spend .btn-condition .select-area ul li{list-style: none;width:100% ;height: 1.5rem;}
+.s-m-title-spend .btn-condition .select-area ul li .s-a-title{width:30%; float: left;height: 100%;  line-height:  1.5rem; }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input{width:70%;float: right;height: 100%;   line-height:  1.5rem; }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input input {  line-height:  1.5rem;   border: 0;  outline: none;  background: transparent;  color: #fff;  font-size: 14px;  }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .btn-input {   line-height:  1.5rem;  width:100%;height: 1.5rem; }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .btn-input .btn-module{  width: 31%;  height: 100%;  background: #73b2fd;  display: block; float: left;  line-height:  1.5rem;    border: 1px solid #73b2fd;  font-size: 15px;}
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .b-l { border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-right:0; }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .b-r { border-top-right-radius: 5px; border-bottom-right-radius: 5px;  border-left:0;  }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .b-m { }
+.s-m-title-spend .btn-condition .select-area ul li .s-a-input .active{   background: #cae2ff !important; border: 1px solid #cae2ff !important;  box-shadow: inset 0px 0px 10px 0px #85bafb; }
+.m-title {width: 100%; height: 2rem;position: absolute;    z-index: 99;}
+.m-title ul {width: 120%; height:100%;margin-left:-10%;text-align: center}
+.m-title ul li {float: left; width:33%; height: 100%; line-height: 2rem; list-style: none;color:#fff;font-size: 15px;  font-weight: 100;     text-shadow: 1px 1px 2px rgb(39, 43, 45);}
+.m-title ul  .active{    text-shadow: 0px 0px 0 rgb(39, 43, 45);}
+.spend-main .s-m-title .m-content {width: 100%; height:9rem;}
+.spend-main .s-m-title .m-content .m-c-text  {width: 100%; height:10rem;}
+.spend-main .s-m-title .m-content .m-c-text .m-c-t-title{width: 100%; height: 5rem;line-height: 8rem;  font-size: 20px;  text-align: center;  color: #fff; }
+.spend-main .s-m-title .m-content .m-c-text .m-c-t-content{width: 100%; height: 4rem;    text-align: center;  line-height: 4rem; font-size: 40px;  color: #fff;}
+.spend-main .s-m-content {width: 100%}
+.spend-main .s-m-content .s-m-c-title { width: 100%; height: 4rem; line-height: 4rem; text-align: center;color:#555555; font-size: 20px;background: #f0f0f1}
+.spend-main .s-m-content .s-m-c-content {width: 100%;}
+.spend-main .s-m-content .s-m-c-content ul {width: 100%;}
+.spend-main .s-m-content .s-m-c-content ul li{width: 100%; height: 3rem;padding: 5px 0;    list-style: none;}
+.spend-main .s-m-content .s-m-c-content ul li:nth-child(2){background: #f3f5f9}
+.s-c-title { font-weight:bold; width: 2.2rem;  height: 2.2rem; max-width: 22%;  float: left;  margin: 5px;  text-align: center;  font-size: 1.9rem;  line-height: 2.4rem;  border-radius: 100%;  color: #fff;  background: #0e904e;  }
+.spend-main .s-m-content .s-m-c-content ul li .s-c-explain{width: 70%;height: 100%; float: left;text-indent: 5px;}
+.spend-main .s-m-content .s-m-c-content ul li .s-c-explain .s-c-e-class{width: 100%; height: 1.5rem;line-height: 1.5rem;color: #555555;  font-size: 16px;}
+.spend-main .s-m-content .s-m-c-content ul li .s-c-explain .s-c-e-time{width: 100%; height: 1.5rem;line-height: 1.5rem;    font-size: 0.8rem;  color: #888888;}
+.spend-main .s-m-content .s-m-c-content ul li .s-c-money {width: 15%;height: 100%;float: left;line-height: 3rem;text-align: right;  font-size: 20px;  color: #bd0707;}
+.s-m-ensure {display: none;width: 90%;  background: #efefef;  position: fixed;  z-index: 99999;  left: 5%;  top: 80px;  border-radius: 10px;}
+.s-m-ensure .m-e-title {width: 100%;  height: 2rem;  background: #15a9e9;  font-size: 1rem; font-weight: 500;  line-height: 2rem;  text-align: center;  color: #fff;  border-top-left-radius: 8px;  border-top-right-radius: 8px;}
+.s-m-ensure .m-e-classify{width: 100%;  height: 2.2rem;  background:#fbf7ee }
+.s-m-ensure .m-e-classify ul {width: 98%;  height: 2.2rem;  line-height: 2.2rem ; margin:0 auto;}
+.s-m-ensure .m-e-classify ul li {float: left; list-style: none; width: 3rem; height: 2.2rem; text-align: center; padding:0 0.2rem; color:#777;    font-size: 15px;font-weight: 400;}
+.s-m-ensure .m-e-classify ul .active {color:#15a9e9}
+.s-m-ensure .m-e-childer {width: 100%; min-height:6rem; background: #ffffff; margin-top: 1px;margin-bottom: 2px;}
+.s-m-ensure .m-e-childer ul{width:100%;height: 100%}
+.s-m-ensure .m-e-childer ul li {  float: left;  margin: 5px 5px;  list-style: none;  font-size: 0.9rem;   padding: 4px 10px;  border-radius: 3px;  color: #777777;  border:1px solid #eeeeee;   position: relative;}
+.s-m-ensure .m-e-childer ul li .corner {  height: 10px;  width: 10px;  display: block;  position: absolute;  right: -1px;  top: -1px;  background: linear-gradient(45deg, transparent 7px, #097d16 0);  box-shadow: 1px -1px 4px rgba(12, 51, 6, 0.26);}
+.s-m-ensure .m-e-childer ul .active {background: #15a9e9;color:#fff; border:1px solid #15a9e6;}
+.s-m-ensure .m-e-remarks{width:100%; height: 2.8rem;background: #ffffff;margin-top: 1px;}
+.s-m-ensure .m-e-remarks .r-m-icon {  width: 2.8rem;  height: 2.8rem;  text-align: center;  line-height: 3rem;  font-size: 1.2rem; float: left }
+.s-m-ensure .m-e-remarks .remark {color:#15a9e9}
+.s-m-ensure .m-e-remarks .division {color:#a7654d }
+.s-m-ensure .m-e-remarks .calendar {color:#4da776}
+.s-m-ensure .m-e-remarks .r-m-text { display: inline-block;  float: left;  height: 2.8rem;}
+.s-m-ensure .m-e-remarks .r-m-text input{width: 100%;  height: 100%;  border: 0;  outline: none;  font-size: 15px;  color: #555555;  line-height: 2.8rem;  font-weight: 500;}
+.s-m-ensure .m-e-money {width:100%; height: 2.8rem;background: #ffffff;}
+.s-m-ensure .m-e-money .m-money-area {width: 50%;height: 100%;float: left;}
+.s-m-ensure .m-e-money .m-money-area .symbol{    width: 20%;  height: 100%;  float: left;  line-height: 2.8rem;  font-size: 1.5rem;  text-align: center;  background: #f5f5f5;}
+.s-m-ensure .m-e-money .m-money-area input {width: 80%; height: 100%; border:0; outline: none;background:#f5f5f5 ;      color: #4a4949;  font-size: 1.4rem;}
+.s-m-ensure .m-e-money .m-money-area button {width: 100%; height: 100%; border:0; outline: none;background:#15a9e9; color: #fff;  font-size: 1.1rem;}

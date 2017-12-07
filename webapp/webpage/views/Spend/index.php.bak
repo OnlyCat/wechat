@@ -1,0 +1,164 @@
+<style>
+    .spend-line {width: 100%; padding:5px;background: #fff;margin-bottom:5px;}
+    .spend-line .n-s-t {height:1.5rem;width: 100%; line-height: 1.5rem}
+    .spend-line .n-s-t .n-t-title{display: inline-block;height: 100%;}
+    .spend-line .n-t-caption{height: 100%;}
+    .spend-line .n-c-text {float: left; padding:0 0.5rem; font-size: 13px; background: #0099ff; color:#fff}
+    .dot-left {font-size: 0;  line-height: 0;  border-width: 0.75rem;  border-color: #0099ff;  border-left-width: 0;  border-style: dashed;  border-right-style: solid;  border-top-color: transparent;  border-bottom-color: transparent;  }
+    /* 向上的箭头 */
+    .dot-top {  font-size: 0;  line-height: 0;  border-width: 0.75rem;  border-color: #0099ff;  border-top-width: 0;  border-style: dashed;  border-bottom-style: solid;  border-left-color: transparent;  border-right-color: transparent;  }
+    /* 向右的箭头 */
+    .dot-right {float: right;  font-size: 0;  line-height: 0;  border-width: 0.75rem;  border-color: #0099ff;  border-right-width: 0;  border-style: dashed;  border-left-style: solid;  border-top-color: transparent;  border-bottom-color: transparent;  }
+    /* 向下的箭头 */
+    .dot-bottom {  font-size: 0;  line-height: 0;  border-width: 0.75rem;  border-color: #0099ff;  border-bottom-width: 0;  border-style: dashed;  border-top-style: solid;  border-left-color: transparent;  border-right-color: transparent;  }
+    /* 向左的箭头 */
+    .dot-left {  font-size: 0;  line-height: 0;  border-width: 0.75rem;  border-color: #0099ff;  border-left-width: 0;  border-style: dashed;  border-right-style: solid;  border-top-color: transparent;  border-bottom-color: transparent;  }
+    .n-s-c {width:100%;max-height: 20rem; overflow: hidden; overflow-y: scroll;}
+    .n-s-c .date-select-range{margin-top:1px; width:100%; height:1.5rem; line-height: 1.5rem; font-size: 13px;text-align: center;font-weight:900; color: #C1194E;}
+    .n-s-c .date-select-range .l-date-range {width: 1.5rem; height: 1.5rem;background: #f9e6e6; float: left; border-radius: 50%;font-size: 1.5rem;}
+    .n-s-c .date-select-range .r-date-range {width: 1.5rem; height: 1.5rem;background: #f9e6e6; float: right; margin-right: 10px;border-radius: 50%;font-size: 1.5rem;}
+    .n-s-c .date-select-range .week-date-range {height: 1.5rem;display: inline-block}
+    .n-s-c .n-s-c-table .s-c-title { width: 100%;  height: 2.4rem;  line-height: 2.4rem;  text-align: center;  font-size: 20px; /* font-weight: 900; */  color: #fff;  background: #4a71fd;  font-family: 微软雅黑;}
+    .day-table {  width: 98%;  font-size: 12px;  border:1px solid #ccc; border-collapse: collapse;    margin-top: 1px;}
+    .day-table  tr {height: 1.3rem; background: #f8f8f8; color: #a2a2a2; }
+    .day-table  tr:nth-child(2){background: #fff;}
+    .day-table .activity { }
+    .day-table th{  font-size: 13px;   background: #6a6991  ;  color: #fff;}
+    .day-table td,th { border:1px solid  #ccc;text-align: center;}
+</style>
+<div class="spend-line">
+    <div class="n-s-t">
+        <div class="n-t-title">
+            <div class="n-t-caption">
+                <div class="n-c-text">
+                    今日账单
+                </div>
+                <div class="dot-right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="n-s-c">
+        <div class="n-s-c-table">
+            <div class="s-c-title">今日共花费 ￥<span id="money">0</span> 元</div>
+            <div class="s-c-table">
+                <table class="day-table">
+                    <tr>
+                        <th>时间</th>
+                        <th>种类</th>
+                        <th>金额</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="spend-line">
+    <div class="n-s-t">
+        <div class="n-t-title">
+            <div class="n-t-caption">
+                <div class="n-c-text">
+                    一周财报
+                </div>
+                <div class="dot-right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="n-s-c">
+        <div class="date-select-range">
+            <div class="l-date-range"><i class="fa fa-angle-left"></i></div>
+            <div class="week-date-range"></div>
+            <div class="r-date-range"><i class="fa fa-angle-right"></i></div>
+        </div>
+        <div id ="nightingale" style="width: 50%;height:7rem; font-size: 12px"></div>
+        <div id = "dog-leg-path" style="width: 100%;height:7rem; font-size: 12px"></div>
+        <div class="week-avg">本周共花费</div>
+    </div>
+</div>
+
+
+<script>
+    var url = window.location.origin;
+    var param = window.location.search;
+    var weekList = new Array();
+    var dogLegPath = echarts.init(document.getElementById('dog-leg-path'));
+    var nightingale = echarts.init(document.getElementById('nightingale'));
+
+    $(document).ready(function () {
+        //获取当日账单数据
+        uri = "/spend/daySpend"
+        daySpendUrl = url + uri + param;
+        $.get(daySpendUrl, function (result) {
+            result = JSON.parse(result);
+            var money = 0;
+            for (item in result) {
+                money += parseFloat(result[item]['money']);
+                var node = "<tr sid='" + result[item]['id'] + "'>";
+                if (result[item]['isconfirm'] == '0') {
+                    node = "<tr class='activity' sid='" + result[item]['id'] + "'>";
+                }
+                node = node + '<td>' + result[item]['spendtime'].substr(11) + '</td><td>' + result[item]['classify'] + '·' + result[item]['childr'] + "</td><td>" + result[item]['money'] + "</td></tr>";
+                $(".day-table").append(node);
+            }
+            $("#money").html(money);
+        });
+
+        //获取周账单数据
+        uri = "/spend/weekSpendTotal"
+        weekSpendUrl = url + uri + param;
+        $.get(weekSpendUrl, function (result) {
+            var week = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+            result = JSON.parse(result);
+            var spendlist = result['spendlist'];
+            $(".week-date-range").html(result['spenddate']['strardate'] + " 到 " + result['spenddate']['stopdate']);
+            for (item in spendlist) {
+                weekList.push([week[item], spendlist[item].money]);
+            }
+
+            var dateList = weekList.map(function (item) {
+                return item[0];
+            });
+            var valueList = weekList.map(function (item) {
+                return item[1];
+            });
+            option = {
+                visualMap: {show: false, type: 'continuous', seriesIndex: 0, min: 0, max: 200},
+                tooltip: {trigger: 'axis'},
+                xAxis: {data: dateList},
+                yAxis: {splitLine: {show: false}},
+                grid: {top: '10', bottom: '20'},
+                series: {type: 'line', showSymbol: false, data: valueList}
+            };
+            dogLegPath.setOption(option);
+        });
+
+        //南丁格尔图设计
+        uri = "/spend/weekSpendClass"
+        weekSpendUrl = url + uri + param;
+        var chartData = [];
+        $.get(weekSpendUrl, function (result) {
+            result = JSON.parse(result);
+            for (item in result) {
+                var node = new Object();
+                node.name = result[item]['childr'];
+                node.value = result[item]['money'];
+                chartData.push(node)
+            }
+            option = {
+                calculable: true,
+                series: [
+                    {
+                        type: 'pie',
+                        radius: [5, 30],
+                        center: ['50%', '50%'],
+                        roseType: 'area',
+                        data: chartData
+                    }
+                ]
+            };
+            nightingale.setOption(option);
+        });
+
+
+    })
+</script>

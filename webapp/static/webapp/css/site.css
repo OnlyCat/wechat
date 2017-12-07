@@ -1,0 +1,24 @@
+* {margin:0; padding:0}
+body { width:100%;height:100%; box-sizing: border-box;  overflow: hidden;}
+.loading {    position: absolute;  top: 0;  bottom: 0;  z-index: 99999;    width: 100%;  height: 100%;  background: #fff;}
+.loading .img-area {    width: 50%;  margin: 0 auto;  margin-top: 8rem;}
+.loading .img-area img {    width: 100%;  height: 100%;}
+.loading .text-area{    width: 100%;  text-align: center;}
+.wrap { width: 100%;  height: 100%;  overflow: hidden;  position: relative;}
+.wrap .content{  width:100%; overflow: hidden}
+.wrap .header{    background: #0099FF;  position: absolute;  width: 100%;  z-index: 9998;  -webkit-box-shadow: 0px 1px 3px 0px #8e8c8c;  -moz-box-shadow: 0px 1px 3px 0px #8e8c8c;  box-shadow: 0px 1px 3px 0px #8e8c8c;}
+.wrap .footer {height:3.2rem; width:100%; background: #fcfcfc; position: absolute;  bottom: 0; z-index: 9998;  -webkit-box-shadow: 0px -1px 3px 0px #8e8c8c;  -moz-box-shadow: 0px -1px 3px 0px #8e8c8c;  box-shadow: 0px -1px 3px 0px #8e8c8c;}
+.f-menu {  color: #bbbbbb;width:100%;  height:100%; text-align: center;}
+.f-menu ul {width:100%;  height:100%}
+.f-menu ul li{float:left; width:25%; height:100%; list-style: none}
+.f-menu ul .active {color:#0099FF}
+.f-menu ul li dl{width:100%;  height:100%}
+.f-menu ul li dl dt{ height:65%; width:100%}
+.f-menu ul li dl dt i {font-size: 26px;  line-height: 150%;}
+.f-menu ul li dl dd{ height:35%; width:100%;font-size:12px; }
+.h-title {width:100%;height:100%; color:#fff;text-align: center;  line-height: 2.6rem;  font-size: 19px;}
+.h-title .l-h-menu {width:10%;  height:100%; float: left}
+.h-title .m-h-title {width:80%; height:100%; float: left}
+.h-title .r-h-text {width: 10%; height:100%; float: left}
+.l-side-bar {left:-180px; width:170px; height:100%; position: absolute; top:0; bottom:0; background: #3c4542; z-index:10001;webkit-box-shadow: 3px 0px 6px 0px #525151;  -moz-box-shadow: 3px 0px 6px 0px #525151;  box-shadow: 3px 0px 6px 0px #525151; }
+.bg-shade {top:0; bottom:0;width:100%;position: absolute; background: rgba(0,0,0,0.5); z-index:10000; display: none;}

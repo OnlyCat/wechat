@@ -1,0 +1,38 @@
+body {background: #fafafa}
+.h-carousel .h-c-box {height:100%;width:100%;position: relative}
+.h-carousel .h-c-box ul { width:100%; height:100%}
+.h-carousel .h-c-box ul li{ width:100%; height:100%; list-style: none;float: left}
+.h-carousel .h-c-box ul li img {width:100%; height:100%;}
+.h-b-menu { background: #fff; width:100%; height:8rem; overflow: hidden;    padding: 5px 0;}
+.h-b-menu .h-m-box {width:100%; height:100%; margin: 0 auto; text-align: center;}
+.h-b-menu .h-m-box ul {width: 100%; height: 100%}
+.h-b-menu .h-m-box ul li {list-style: none; float: left; width:25%; height:50%;}
+.h-b-menu .h-m-box ul li dl {width: 100%;height:100%}
+.h-b-menu .h-m-box ul li dl dt{width:100%;height:70%}
+.h-b-menu .h-m-box ul li dl dt img {height:100%;}
+.h-b-menu .h-m-box ul li dl dd{width:100%;height:30%; font-size:12px; color: #999;}
+
+.news-box { background: #fff; width:100%; margin-top:5px;}
+.news-box .news-title{width:100%; height:1.5rem;font-weight: bold; }
+.news-box .news-title span { border-right: 1rem solid white;  border-top: 1rem solid #0099ff;  display: block;  float: left;}
+.news-box .news-item {width:100%;  margin-top: 3px;}
+.news-box .news-item .img-area {width:7rem; height:100%;max-width: 30%;float: left; border-bottom: 1px solid #fbfbfb}
+.news-box .news-item .img-area img {width: 100%; height:100%; padding-left:0.2rem}
+.news-box .news-item .text-area {width:100%; display: inline-block;}
+.news-box .news-item .text-t-area {width:100%; display: inline-block;}
+.news-box .news-item .t-a-title { height:2rem; overflow: hidden;  text-overflow: ellipsis; white-space: nowrap;  line-height: 2rem;  padding:0 0.5rem;color: #555555;}
+.news-box .news-item .t-a-content{  overflow: hidden; text-indent: 2em;  font-size: 13px; padding:0 0.5rem;color: #aaa;}
+.news-box a{text-decoration: none;}
+
+.bill-box{ background: #fff; width:100%; margin-top:5px;padding:5px}
+.bill-box .n-b-c-title {width:100%; height:2rem}
+.bill-box .n-c-t-prompt {width:2rem; height:2rem; float: right}
+.bill-box .n-c-t-prompt i{color: #888; font-size:14px}
+.bill-box .n-b-c-title .n-c-t-icon {width: 2rem;  height: 2rem;  color: #ffffff;  float: left;  text-align: center;  font-size: 1.2rem;  line-height: 2rem;  background: rebeccapurple;  border-radius: 5px;}
+.bill-box .n-b-c-title .n-c-t-text {display: inline-block;float: left;font-size: 13px;  color: #999;  line-height: 1rem;}
+.bill-box .n-b-c-title .n-c-t-text .n-c-t-title,.n-c-t-time {padding-left:3px;}
+.bill-box .n-b-c-content {margin-top:5px; padding:5px;}
+.bill-box .n-b-c-content .n-b-c-line{ width: 98%;height:1.8rem;line-height: 1.8rem; font-size: 13px;  color: #777;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-l{width: 30%; height:100%;float: left;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-r .n-b-c-l-m {font-size:20px;  color: #000;}
+.bill-box .n-b-c-content .n-b-c-line .n-b-c-r{width: 70%; height:100%;float: right;text-align: right}
