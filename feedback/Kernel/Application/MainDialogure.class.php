@@ -259,10 +259,10 @@
 
                 //账单处理程序
                 case '1':
-                    $ret = $this->strToNumber($keyWord);
-                    foreach($ret as $key => $value){
-                        $keyWord = str_replace($key, $value, $keyWord);
-                    }
+//                    $ret = $this->strToNumber($keyWord);
+//                    foreach($ret as $key => $value){
+//                        $keyWord = str_replace($key, $value, $keyWord);
+//                    }
                     $SpendList = $spend->getFeedbackMsg($keyWord);
                     $ret = $spend->saveSpend($userid,  $SpendList['ReportMsg']['date'],  $SpendList['ReportMsg']['type'], $SpendList['ReportMsg']['branch'],  $SpendList['ReportMsg']['money'], $SpendList['ReportMsg']['describe']);
                     if(!$ret){
